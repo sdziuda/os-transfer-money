@@ -226,8 +226,8 @@ diff -rupNEZbB OriginalSources/usr/src/minix/servers/pm/table.c Sources/usr/src/
  };
 diff -rupNEZbB OriginalSources/usr/src/minix/servers/pm/transfermoney.c Sources/usr/src/minix/servers/pm/transfermoney.c
 --- OriginalSources/usr/src/minix/servers/pm/transfermoney.c	1970-01-01 01:00:00.000000000 +0100
-+++ Sources/usr/src/minix/servers/pm/transfermoney.c	2023-05-13 20:48:06.616247689 +0200
-@@ -0,0 +1,44 @@
++++ Sources/usr/src/minix/servers/pm/transfermoney.c	2023-05-13 23:04:35.106247163 +0200
+@@ -0,0 +1,43 @@
 +#include "pm.h"
 +#include "mproc.h"
 +#include <stdbool.h>
@@ -267,8 +267,7 @@ diff -rupNEZbB OriginalSources/usr/src/minix/servers/pm/transfermoney.c Sources/
 +    mp->mp_balance -= amount;
 +    recipient_proc->mp_balance += amount;
 +
-+    struct mproc *rmp = mp;
-+    rmp->mp_reply.m_pm_transfer.result = mp->mp_balance;
++    mp->mp_reply.m_pm_transfer.result = mp->mp_balance;
 +
 +    return 0;
 +}
