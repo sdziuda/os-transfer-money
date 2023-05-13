@@ -82,7 +82,7 @@ diff -rupNEZbB OriginalSources/usr/src/lib/libc/misc/Makefile.inc Sources/usr/sr
 +SRCS+= transfermoney.c
 diff -rupNEZbB OriginalSources/usr/src/lib/libc/misc/transfermoney.c Sources/usr/src/lib/libc/misc/transfermoney.c
 --- OriginalSources/usr/src/lib/libc/misc/transfermoney.c	1970-01-01 01:00:00.000000000 +0100
-+++ Sources/usr/src/lib/libc/misc/transfermoney.c	2023-05-12 18:01:40.866638713 +0200
++++ Sources/usr/src/lib/libc/misc/transfermoney.c	2023-05-13 20:48:06.696247689 +0200
 @@ -0,0 +1,15 @@
 +#include <lib.h>
 +#include <unistd.h>
@@ -99,7 +99,6 @@ diff -rupNEZbB OriginalSources/usr/src/lib/libc/misc/transfermoney.c Sources/usr
 +
 +    return -1;
 +}
-\ No newline at end of file
 diff -rupNEZbB OriginalSources/usr/src/minix/include/minix/callnr.h Sources/usr/src/minix/include/minix/callnr.h
 --- OriginalSources/usr/src/minix/include/minix/callnr.h	2014-09-13 23:56:50.000000000 +0200
 +++ Sources/usr/src/minix/include/minix/callnr.h	2023-05-10 20:18:07.328408271 +0200
@@ -227,7 +226,7 @@ diff -rupNEZbB OriginalSources/usr/src/minix/servers/pm/table.c Sources/usr/src/
  };
 diff -rupNEZbB OriginalSources/usr/src/minix/servers/pm/transfermoney.c Sources/usr/src/minix/servers/pm/transfermoney.c
 --- OriginalSources/usr/src/minix/servers/pm/transfermoney.c	1970-01-01 01:00:00.000000000 +0100
-+++ Sources/usr/src/minix/servers/pm/transfermoney.c	2023-05-12 14:48:12.735171618 +0200
++++ Sources/usr/src/minix/servers/pm/transfermoney.c	2023-05-13 20:48:06.616247689 +0200
 @@ -0,0 +1,44 @@
 +#include "pm.h"
 +#include "mproc.h"
@@ -273,4 +272,3 @@ diff -rupNEZbB OriginalSources/usr/src/minix/servers/pm/transfermoney.c Sources/
 +
 +    return 0;
 +}
-\ No newline at end of file
